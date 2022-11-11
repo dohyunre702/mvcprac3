@@ -65,6 +65,12 @@ public class ArticleController {
         }
     }
 
+    @GetMapping("/{id}/delete") //삭제
+    public String delete(@PathVariable Long id) {
+        articleRepository.deleteById(id);
+        return "redirect:/articles";
+    }
+
 
     //post
     @PostMapping("/posts") //new에서 submit 눌렀을 때 요청과 내용을 받음
