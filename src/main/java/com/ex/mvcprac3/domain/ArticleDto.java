@@ -1,6 +1,5 @@
 package com.ex.mvcprac3.domain;
 
-import com.ex.mvcprac3.domain.entity.Article;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

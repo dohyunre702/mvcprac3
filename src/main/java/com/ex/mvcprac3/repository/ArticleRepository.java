@@ -1,6 +1,6 @@
-package com.ex.mvcprac3.domain;
+package com.ex.mvcprac3.repository;
 
-import com.ex.mvcprac3.domain.entity.Article;
+import com.ex.mvcprac3.domain.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

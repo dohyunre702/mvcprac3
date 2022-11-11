@@ -1,8 +1,8 @@
 package com.ex.mvcprac3.controller;
 
 import com.ex.mvcprac3.domain.ArticleDto;
-import com.ex.mvcprac3.domain.ArticleRepository;
-import com.ex.mvcprac3.domain.entity.Article;
+import com.ex.mvcprac3.repository.ArticleRepository;
+import com.ex.mvcprac3.domain.Article;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

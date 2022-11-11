@@ -1,4 +1,4 @@
-package com.ex.mvcprac3.domain.entity;
+package com.ex.mvcprac3.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
