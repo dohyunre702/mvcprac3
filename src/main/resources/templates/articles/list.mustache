@@ -8,13 +8,17 @@
     </tr>
     </thead>
     <tbody class="table-group-divider">
-    {{#articles}}
+    {{#hospitals}}
         <tr>
             <th>{{id}}</th>
-            <td><a href="/articles/{{id}}">{{title}}</a></td>
+            <td><a href="/hospitals/{{id}}">{{title}}</a></td>
             <td>{{content}}</td>
         </tr>
-    {{/articles}}
+        <ul class="pagination justify-content-center"> <!--페이징-->
+            <li class="page-item"><a class="page-link" href="?page={{previous}}">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{next}}">Next</a></li>
+        </ul>
+    {{/hospitals}}
     </tbody>
 </table>
 <a href="/articles/new">new article</a>
