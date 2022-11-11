@@ -83,4 +83,10 @@ public class ArticleController {
 
         return "";
     }
+
+    @PostMapping("/{id}/update") //게시글 수정
+    public String update(@PathVariable Long id, ArticleDto articleDto) {
+        log.info("title:{} content:{}", articleDto.getTitle(),articleDto.getContent());
+        return "";
+    }
 }
