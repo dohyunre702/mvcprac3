@@ -84,9 +84,11 @@ public class ArticleController {
         return "";
     }
 
-    @PostMapping("/{id}/update") //게시글 수정
-    public String update(@PathVariable Long id, ArticleDto articleDto) {
+    @PostMapping("/{id}/update") //수정한 게시글 저장
+    public String update(@PathVariable Long id, ArticleDto articleDto, Model model) {
         log.info("title:{} content:{}", articleDto.getTitle(),articleDto.getContent());
-        return "";
+        Article article = articleRepository.save(articleDto.toEntity());
+        model.addAttribute("article", article);
+        return String.format("redirect:/articles/%d", article.getId());
     }
 }
