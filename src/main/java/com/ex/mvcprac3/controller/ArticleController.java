@@ -20,6 +20,8 @@ public class ArticleController {
         this.articleRepository = articleRepository;
     }
 
+
+    //get
     @GetMapping(value = "/new")
     public String newArticleForm() {
         return "articles/new";
@@ -49,6 +51,22 @@ public class ArticleController {
        return "redirect:/articles/list";
         }
 
+    @GetMapping("/{id}/edit")
+    public String edit(@PathVariable Long id, Model model) {
+        Optional<Article> optionalArticle =
+                articleRepository.findById(id);
+
+        if (!optionalArticle.isEmpty()) {
+            model.addAttribute("article", optionalArticle.get());
+            return "edit";
+            } else {
+            model.addAttribute("message", String.format("%d가 없습니다.", id));
+            return "error";
+        }
+    }
+
+
+    //post
     @PostMapping("/posts") //new에서 submit 눌렀을 때 요청과 내용을 받음
     public String createArticle(ArticleDto form) {
         log.info(form.toString());
