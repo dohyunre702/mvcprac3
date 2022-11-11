@@ -1,5 +1,6 @@
 package com.ex.mvcprac3.domain.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -7,7 +8,8 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="article")
-@NoArgsConstructor
+@NoArgsConstructor //파라미터 없는 기본 생성자 생성
+@AllArgsConstructor //모든 값을 받는 Constructor 생성
 @Getter
 public class Article {
 
