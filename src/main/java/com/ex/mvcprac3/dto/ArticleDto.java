@@ -1,5 +1,6 @@
-package com.ex.mvcprac3.domain;
+package com.ex.mvcprac3.dto;
 
+import com.ex.mvcprac3.domain.Article;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.ToString;

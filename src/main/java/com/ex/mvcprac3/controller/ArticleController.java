@@ -1,6 +1,6 @@
 package com.ex.mvcprac3.controller;
 
-import com.ex.mvcprac3.domain.ArticleDto;
+import com.ex.mvcprac3.dto.ArticleDto;
 import com.ex.mvcprac3.repository.ArticleRepository;
 import com.ex.mvcprac3.domain.Article;
 import lombok.extern.slf4j.Slf4j;
@@ -40,7 +40,7 @@ public class ArticleController {
     }
 
     @GetMapping("/list")  // list일 때 list로
-    public String list(Model model){ //리퐂토리
+    public String list(Model model){ //리포지토리
         List<Article> articles = articleRepository.findAll();
         model.addAttribute("articles", articles);
         return "list";
