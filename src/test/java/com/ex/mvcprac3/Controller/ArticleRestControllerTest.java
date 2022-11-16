@@ -1,6 +1,7 @@
 package com.ex.mvcprac3.Controller;
 
 import com.ex.mvcprac3.ArticleService;
+import com.ex.mvcprac3.controller.ArticleRestController;
 import com.ex.mvcprac3.dto.ArticleDto;
 import org.junit.jupiter.api.DisplayName;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class ArticleRestControllerTest {
                 .andExpect(jsonPath("$.title").exists())
                 .andExpect(jsonPath("$.content").exists())
                 .andDo(print());
-        verify()
+
+        verify(articleService).getArticleById(id);
     }
 }
