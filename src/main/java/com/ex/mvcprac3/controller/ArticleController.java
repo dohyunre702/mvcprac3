@@ -22,6 +22,7 @@ public class ArticleController {
 
 
     //get
+
     @GetMapping(value = "/new")
     public String newArticleForm() {
         return "articles/new";
